@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("http://127.0.0.1:5500/fonts/SourceSansPro-Regular.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: "SourceSansPro";
+    
+}
+
+.hero{
+    background-image: url("http://127.0.0.1:5500/images/headphones_hero_1.jpg");
+    background-repeat: no-repeat;
+    min-width: 325px;
+    width: 100%;
+    margin:0;
+    display: block;
+    text-align: center;
+    color: white;
+    height: 875px;
+
+}
+
+h1{
+    height: 80px;
+    width: 320px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: auto;
+}
+
+.hero-text p{
+    height: 40px;
+    width: 230px;
+    left: 39px;
+    top: 85px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+
+.header .burger {
+   display: none;
+}
+
+.header img{
+    width: 160px;
+    height: 30px;
+}
+
+.hero .header{
+    padding-top: 20px;
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-between;
+    min-width: 325px;
+}
+
+.menu{
+    display: none;
+}
+
+.container{
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.options ul{
+    display: flex;
+}
+
+.options li{
+    margin-left: 50px;
+}
+
+.button{
+width: 162px;
+height: 44px;
+line-height: 44px;
+background: #FF6565;
+margin: auto;
+border-radius: 22px;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+letter-spacing: 0px;
+text-align: center;
+margin-bottom: 60px;
+}
+
+.last-text{
+    margin: auto;
+}
+
+
+.info h1{
+    margin-bottom: 30px;
+}
+.info p{
+    width: 637px;
+    text-align: center;
+    margin: auto;
+}
+
+.info{
+    margin-bottom: 80px;
+}
+
+.icon{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 90px;
+    width: 260px;
+}
+
+.icon p{
+    width: 260px;
+}
+
+.icon svg{
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.icon h2{
+    margin-bottom: 10px;
+}
+
+.icons-services{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media  screen and (max-width: 480px){  
+    .hero{
+        background-size:cover;
+        width: 100%;
+        background-position:-425px -60px;
+    }
+
+    .hero-text{
+        margin-top: 200px;
+    }
+
+    .header{
+        margin: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    .header::after{
+        content: "center";
+        color: transparent;
+    }
+
+    .header .burger {
+        display: initial;
+     
+     }
+    .options{
+       display: none;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        
+
+    }
+
+    .hero .last-text{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    .info p{
+        margin: auto;
+        width: 325px;
+        height: 180px;
+    }
+
+}
+
+@media  screen and (min-width: 481px ){
+    .hero{
+        background-size:cover contain;
+        width: 100%;
+        background-position:-350px -60px;
+    }
+
+    .hero .header{
+        padding-top: 40px;
+        padding-right: 80px;
+        padding-left: 80px;
+        margin-bottom: 250px;
+    }
+    h1{
+        width: 578px;
+        height: 40px;
+    }
+
+    .hero-text p{
+        width: 355px;
+    }
+
+    .last-text{
+        width: 637px;
+        height: 104px;
+    }
+}
+
+@media  screen and (min-width: 1024px){
+    .hero{
+        background-size:cover contain;
+        width: 100%;
+        background-position:0px 0px;
+        height: 860px;
+    }
+
+
+    .hero .header{
+        padding-top: 27px;
+        padding-right: 80px;
+        padding-left: 200px;
+        margin-bottom: 250px;
+    }
+
+    .container{
+        padding-top: 65px;
+    }
+
+    
+}
