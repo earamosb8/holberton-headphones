@@ -10,25 +10,27 @@
 <body>
     <div class="hero">
         <header class="header">
-            <div class="burger">
-                <i>...</i>
-            </div>
+            <input type="checkbox" id="burger-button">
+            <label for="burger-button"></label>
             <img src="./images/logo_headphones.png" alt="logo">
-            <div class="options">
+            <div id="options" class="options" >
                 <ul>
                     <li><a href="#whatwedo">what we do</a></li>
                     <li><a href="#ourresults">our results</a></li>
                     <li><a href="#contactus">contact us </a></li>
                 </ul>
             </div>
-        </header>
-        <div class="menu">
-            <ul>
-                <li><a href="#whatwedo">what we do</a></li>
+            <div id="menu" class="menu" >
+                <ul>
+                    <li><a href="#whatwedo">what we do</a></li>
                     <li><a href="#ourresults">our results</a></li>
                     <li><a href="#contactus">contact us </a></li>
-            </ul>
-        </div>
+                </ul>
+            </div>
+            
+        </header>
+        
+        
         <div class="container">
             <div class="hero-text">
                 <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
@@ -114,9 +116,9 @@
     <div class="contact-us-section" id="contactus">
         <form action="">
             <h1>Contact us</h1>
-            <input type="text" name="" id="" placeholder="Name">
-            <input type="text" name="" id="" placeholder="Email">
-            <input type="text" name="" id="" placeholder="Your message">
+            <input type="text" name="" id="" placeholder="Name" class="field">
+            <input type="text" name="" id="" placeholder="Email" class="field">
+            <input type="text" name="" id="" placeholder="Your message" class="field">
             <div class="button">CALL TO ACTION</div>
         </form>
     </div>

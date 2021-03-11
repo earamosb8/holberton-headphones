@@ -10,6 +10,13 @@
     font-family: "SourceSansPro";
 }
 
+#burger-button{
+    display: none;
+}
+label{
+    display: none;
+}
+
 :root{
     --color-rose: #FF6565;
     --text-hero-color: white;
@@ -79,10 +86,18 @@ h1{
     margin-bottom: 25px;
 }
 
-
-.header .burger {
+.header{
+    position: relative;
+}
+.header .label {
    display: none;
 }
+
+#burger-button{
+    display: none;
+}
+
+
 
 .header img, .footer img{
     width: 160px;
@@ -92,13 +107,12 @@ h1{
 .hero .header{
     padding-top: 20px;
     display: flex;
-    padding-right: 20px;
-    padding-left: 20px;
+    align-items: center;
     justify-content: space-between;
     min-width: 325px;
 }
 
-.menu{
+#menu{
     display: none;
 }
 
@@ -237,7 +251,7 @@ form{
 
 
 
-input{
+.field{
     border: none;
     border-bottom: solid 1px black;
     padding-bottom:10px ;
@@ -294,6 +308,60 @@ input{
     .first-section img{
         margin-bottom: 30px;
     }
+    label,
+label::before,
+label::after{
+    position: absolute;
+    width: 22px;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    margin-top: 1px;
+    top:33px;
+    left: 0px;
+}
+
+label{
+    cursor: pointer;
+    width: 12px;
+    left: 20px;
+}
+
+label::before{
+    content: "";
+    transform: translateY(-38px);
+    -webkit-transform: translateY(-38px);
+}
+label::after{
+    content: "";
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+}
+
+/*animate when checked*/
+
+#burger-button:checked + label{
+    width: 0px;
+    
+}
+
+
+#burger-button:checked + label::before{
+    transform: rotate(45deg) translateX(-24.5px) translateY(-24.5px) ;
+    -webkit-transform: rotate(45deg) translateX(-24.5px) translateY(-24.5px);
+}
+
+#burger-button:checked + label::after{
+    transform: rotate(-45deg) translateX(24.5px) translateY(-24.5px) ;
+    -webkit-transform: rotate(-45deg) translateX(24.5px) translateY(-24.5px);
+}
+#burger-button:checked  ~ div#menu{
+    display:flex;
+    
+}
+
 }
 
 
@@ -313,6 +381,10 @@ input{
         margin-left: 5px;
         margin-right: 5px;
     }
+    .header img{
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 
     .header::after{
@@ -320,18 +392,80 @@ input{
         color: transparent;
     }
 
-    .header .burger {
+    .header label {
         display: initial;
-     
+
      }
     .options{
        display: none;
     }
-    .menu{
-        display: flex;
-        justify-content: center;
-        
+    label,
+label::before,
+label::after{
+    position: absolute;
+    width: 22px;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    margin-top: 1px;
+    top:33px;
+    left: 0px;
+}
 
+label{
+    cursor: pointer;
+    width: 12px;
+    left: 20px;
+}
+
+label::before{
+    content: "";
+    transform: translateY(-38px);
+    -webkit-transform: translateY(-38px);
+}
+label::after{
+    content: "";
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+}
+
+/*animate when checked*/
+
+#burger-button:checked + label{
+    width: 0px;
+    
+}
+
+
+#burger-button:checked + label::before{
+    transform: rotate(45deg) translateX(-24.5px) translateY(-24.5px) ;
+    -webkit-transform: rotate(45deg) translateX(-24.5px) translateY(-24.5px);
+}
+
+#burger-button:checked + label::after{
+    transform: rotate(-45deg) translateX(24.5px) translateY(-24.5px) ;
+    -webkit-transform: rotate(-45deg) translateX(24.5px) translateY(-24.5px);
+}
+#burger-button:checked  ~ div#menu{
+    display:flex;
+    
+}
+
+
+    .menu li{
+        margin-top: 30px;
+       
+    }
+
+    .menu{
+        position: absolute;
+        top:45px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        margin-bottom: 250px;
     }
 
     .hero .last-text{
@@ -434,11 +568,16 @@ input{
 
 
     .hero .header{
+        width: 100%;
         padding-top: 27px;
         padding-right: 80px;
-        padding-left: 200px;
+        padding-left: 80px;
         margin-bottom: 250px;
     }
+
+     header #burger-button{
+         display: none;
+     }
 
     .container{
         padding-top: 65px;
