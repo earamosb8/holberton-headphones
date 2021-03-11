@@ -309,8 +309,8 @@ form{
         margin-bottom: 30px;
     }
     label,
-label::before,
-label::after{
+    label::before,
+    label::after{
     position: absolute;
     width: 22px;
     height: 3px;
